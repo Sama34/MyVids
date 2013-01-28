@@ -1,0 +1,11 @@
+Options -MultiViews +FollowSymlinks -Indexes
+
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	
+	RewriteRule ^video-(.*)\.html viewvid.php?vidseolink=$1 [L,QSA]
+
+	<IfModule mod_env.c>
+		SetEnv SEO_SUPPORT 1
+	</IfModule>
+</IfModule>
